@@ -13,6 +13,11 @@
         /// </returns>
         public static double Area(int r)
         {
+            if (r <= 0)
+            {
+                return 0;
+            }
+
             return Math.PI * Math.Pow(r, 2);
         }
 
@@ -33,6 +38,11 @@
         /// </returns>
         public static double Area(double aSide, double bSide, double cSide) 
         {
+            if (aSide <= 0 || bSide <= 0 || cSide <= 0)
+            {
+                return 0;
+            }
+
             double semiperimeter = (aSide + bSide + cSide) / 2;
 
             return Math.Sqrt(semiperimeter * (semiperimeter - aSide) * (semiperimeter - bSide) * (semiperimeter - cSide));
@@ -68,24 +78,35 @@
         {
             bool isRightTriangle = false;
 
+            if (aSide <= 0 || bSide <= 0 || cSide <= 0)
+            {
+                return false;
+            }
+
             var maxSide = Math.Max(Math.Max(aSide, bSide), cSide);
 
             if (maxSide == aSide)
             {
                 if (Math.Pow(aSide, 2) == Math.Pow(bSide, 2) + Math.Pow(cSide, 2))
+                {
                     isRightTriangle = true;
+                }
             }
 
             else if (maxSide == bSide)
             {
                 if (Math.Pow(bSide, 2) == Math.Pow(aSide, 2) + Math.Pow(cSide, 2))
+                {
                     isRightTriangle = true;
+                }
             }
 
             else
             {
                 if (Math.Pow(cSide, 2) == Math.Pow(bSide, 2) + Math.Pow(aSide, 2))
+                {
                     isRightTriangle = true;
+                }
             }
 
             return isRightTriangle;
