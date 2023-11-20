@@ -62,7 +62,7 @@ namespace SquareCalculation
         /// </param>
         public Triangle(double aSide, double bSide, double cSide)
         {
-            if (aSide <= 0 || bSide <= 0 || cSide <= 0)
+            if (aSide < 0 || bSide < 0 || cSide < 0)
             {
                 throw new ArgumentException("Sides can't be less than zero");
             }
