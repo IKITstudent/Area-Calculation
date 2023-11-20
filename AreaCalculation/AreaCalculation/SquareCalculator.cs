@@ -67,7 +67,7 @@ namespace SquareCalculation
                 throw new ArgumentException("Sides can't be less than zero");
             }
 
-            if (aSide + bSide < cSide || aSide + cSide < bSide || bSide + cSide < aSide)
+            if ((aSide + bSide <= cSide || aSide + cSide <= bSide || bSide + cSide <= aSide) && aSide > 0 && bSide > 0 && cSide > 0)
             {
                 throw new ArgumentException("These sides don't form tringle");
             }
