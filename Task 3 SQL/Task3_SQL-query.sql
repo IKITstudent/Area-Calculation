@@ -31,3 +31,29 @@ CREATE TABLE Showcase
 	category_ID INT FOREIGN key REFERENCES Category(id) not null,
 	PRIMARY KEY (product_ID, category_ID)
 )
+
+INSERT INTO Product VALUES
+('Святой источник'),
+('Coca-cola'),
+('Алёнка'),
+('Архыз'),
+('Арахис')
+
+INSERT INTO Category VALUES
+('Напитки'),
+('Сильно газированные'),
+('Воды'),
+('Негазированные'),
+('Шоколад'),
+('Соки')
+
+INSERT INTO Showcase VALUES
+(1,1),
+(1,3),
+(1,4),
+(2,1),
+(2,2),
+(3,5),
+(4,1),
+(4,2),
+(4,3)
