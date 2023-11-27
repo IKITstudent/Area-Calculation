@@ -33,19 +33,19 @@ CREATE TABLE Showcase
 )
 
 INSERT INTO Product VALUES
-('Святой источник'),
+('Saint spring'),
 ('Coca-cola'),
-('Алёнка'),
-('Архыз'),
-('Арахис')
+('Alpen Gold'),
+('Arkhyz'),
+('Peanut')
 
 INSERT INTO Category VALUES
-('Напитки'),
-('Сильно газированные'),
-('Воды'),
-('Негазированные'),
-('Шоколад'),
-('Соки')
+('Drink'),
+('Highly carbonated'),
+('Water'),
+('Non-carbonated'),
+('Chocolate'),
+('Juice')
 
 INSERT INTO Showcase VALUES
 (1,1),
