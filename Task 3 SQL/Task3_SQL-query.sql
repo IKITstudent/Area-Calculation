@@ -58,7 +58,7 @@ INSERT INTO Showcase VALUES
 (4,2),
 (4,3)
 
-SELECT Product.product_title AS 'Имя продукта', Category.category_title AS ' Имя категория'
+SELECT Product.product_title AS 'Product name', Category.category_title AS ' Category name'
 FROM Showcase
 right join Product ON Showcase.product_ID = Product.ID
 left join Category ON Showcase.category_ID = Category.ID
